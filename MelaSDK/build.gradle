@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    compileSdk 32
+    compileSdk 30
 
     defaultConfig {
         minSdk 21
-        targetSdk 32
+        targetSdk 30
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -27,8 +27,8 @@ android {
 }
 
 dependencies {
-
-
+    implementation fileTree(dir: 'libs', include: ['*.aar', '*.jar'], exclude: [])
+    implementation 'androidx.appcompat:appcompat:1.4.2'
     //Ad network
     implementation 'com.google.android.gms:play-services-ads:20.5.0'
     implementation 'com.applovin:applovin-sdk:11.1.0'
